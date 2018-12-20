@@ -22,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.devicons-solidity:before {
+  content: "../../../img/solidity.svg";
+}
+
 .devicons-git:before {
   content: "\e602";
 }

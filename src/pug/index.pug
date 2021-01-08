@@ -1,0 +1,251 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Markus Waas - Resume
+
+        link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
+
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js', crossorigin='anonymous')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body#page-top
+
+        // Navigation
+        nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+            a.navbar-brand.js-scroll-trigger(href='#page-top')
+                span.d-block.d-lg-none Markus Waas
+                span.d-none.d-lg-block
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#about') About
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#experience') Experience
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#education') Education
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#skills') Skills
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#interests') Interests
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#awards') Awards
+
+        // Page Content
+        .container-fluid.p-0
+
+            // About
+            section#about.resume-section
+                .resume-section-content
+                    h1.mb-0
+                        | Markus
+                        span.text-primary Waas
+                    .subheading.mb-5
+                        | 1/25 Keppell St · Grey Lynn, 1021 Auckland, New Zealand ·
+                        a(href='mailto:mail@markuswaas.com') mail@markuswaas.com
+                    p.lead.mb-5
+                        | With the background of a finished Masters in Computer Science, I have foundational knowledge of all important technical concepts. My experience as a web developer has further given me the knowledge about most aspects of modern web development. Working independently and collaboratively is one of my key strengths. My passion lies in the fields of cryptocurrencies and I'm very happy to be using my Solidity skills as smart contract developer, in particular in the Defi space.
+                    .social-icons
+                        a.social-icon(href='https://www.linkedin.com/in/markus-waas-55067b149')
+                            i.fab.fa-linkedin-in
+                        a.social-icon(href='https://soliditydeveloper.com')
+                            i.fab.fa-medium
+                        a.social-icon(href='https://github.com/gorgos')
+                            i.fab.fa-github
+                        a.social-icon(href='https://twitter.com/gorgos')
+                            i.fab.fa-twitter
+                        a.social-icon(href='https://www.facebook.com/markus.waas')
+                            i.fab.fa-facebook-f
+
+            hr.m-0
+
+            // Experience
+            section#experience.resume-section
+               .resume-section-content
+                    h2.mb-5 Experience
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Senior Defi Developer
+                            .subheading.mb-3 Injective Protocol Labs Inc.
+                            p
+                                | At my current role for Injective Protocol I am responsible for all things related to the futures and spot markets implementations on the Solidity contract side as well as the design of that system. Further, among other things I implement trading and liquidation bots and the required 'The Graph' infrastructure.
+                        .flex-shrink-0
+                            span.text-primary July 2020 - Present
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Smart Contract Solidity Developer
+                            .subheading.mb-3 Laminar Ltd.
+                            p
+                                | I designed and implemented a margin trading platform on Ethereum that allows traders to trade with leverage. The additional support for 'The Graph' allows the frontend an easy and efficient way to query the state. The system supports different markets as well as margin calls and liquidations.
+                        .flex-shrink-0
+                            span.text-primary March 2020 - July 2020
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Blockchain Engineer
+                            .subheading.mb-3 Juri Ltd.
+                            p
+                                | Next to an implementation of a new innovating staking pool, I research new aspects of the blockchain integration. Most notably, I designed a fully decentralized oracle system.
+                        .flex-shrink-0
+                            span.text-primary April 2019 - March 2020
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Blockchain Engineer and Full-stack Developer
+                            .subheading.mb-3 Starbase GmbH
+                            p
+                                | As part of a small scrum team developing an innovative platform for crowdfunding ideas utilizing tokens, I introduced a new staking and ranking smart contract for ERC-20 tokens. Among other notable achievements, I implemented a secure funds splitter as well as many improvements to token sale contracts.
+                        .flex-shrink-0
+                            span.text-primary July 2018 - November 2019
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Frontend Developer
+                            .subheading.mb-3 Infopark AG
+                            p
+                                | In a scrum team, I helped to develop a revolutionary JavaScript Content Management System implementing new frontend features, including the introduction of creative new value type editors as well as improving the React integration, making it more convenient for developers to use the CMS.
+                        .flex-shrink-0
+                            span.text-primary October 2014 - July 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Intern Engineering
+                            .subheading.mb-3 Crypto Software Chryselius
+                            p
+                                | Java and C++ development of a chipcard-based bootloader and file container encryption on a Ubuntu system. Setting up the development environment and administering the backup and build server.
+                        .flex-shrink-0
+                            span.text-primary October 2010 - October 2011
+
+            hr.m-0
+
+            // Education
+            section#education.resume-section
+                .resume-section-content
+                    h2.mb-5 Education
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Humboldt University of Berlin
+                            .subheading.mb-3 Master of Science
+                            div Computer Science
+                            p Ø: 1.2 (somewhere between A+ and A as GPA)
+                        .flex-shrink-0
+                            span.text-primary October 2011 - October 2018
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between
+                        .flex-grow-1
+                            h3.mb-0 Ottonagel-Gymnasium
+                            .subheading.mb-3 Allgemeine Hochschulreife (Abitur)
+                            p Ø: 1.9
+                        .flex-shrink-0
+                            span.text-primary August 2003 - August 2010
+
+            hr.m-0
+
+            // Skills
+            section#skills.resume-section
+                .resume-section-content
+                    h2.mb-5 Skills
+                    .subheading.mb-3 Programming Languages & Tools
+                    ul.list-inline.dev-icons
+                        li.list-inline-item
+                            i.fab.fa-ethereum
+                        li.list-inline-item
+                            i.fab.fa-bitcoin
+                        li.list-inline-item
+                            i.fab.fa-js
+                        li.list-inline-item
+                            i.fab.fa-react
+                        li.list-inline-item
+                            i.fab.fa-aws
+                        li.list-inline-item
+                            i.fab.fa-java
+                    .subheading.mb-3 Languages
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | English (Native Proficiency)
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | German (Native language)
+                        li
+                            span.fa-li
+                                i.fas.fa-check
+                            | Spanish (Elementary Proficiency)
+
+            hr.m-0
+
+            // Interests
+            section#interests.resume-section
+                .resume-section-content
+                    h2.mb-5 Interests
+                    p
+                        | Apart from being a software engineer, I enjoy lots of different types of sport. In the summer, I try to do most sport outdoors, which includes calisthenics and soccer. Further I am a biohacker and interested in the longevity field of research.
+                    p.mb-0
+                        | Since the beginning of blockchain time, i.e., the bitcoin genesis block, I followed the chain. No, I'm kidding, but I started following the scene as early as 2010, being an active member in the community and trying to comprehend new ideas also on a technical level.
+
+            hr.m-0
+
+            // Awards
+            section#awards.resume-section
+                .resume-section-content
+                    h2.mb-5 Awards & Certifications
+                    ul.fa-ul.mb-0
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | 3<sup>rd</sup> Place - HackMoney - Aave Award - Hackathon 2020
+                            a.social-icon(href='https://hack.ethglobal.co/showcase/magicbet-recTQteX6gzC3ooKS')
+                                i.fa.fa-link
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | 1<sup>st</sup> Place - ETH.Berlin - Gnosis Award - Hackathon 2018
+                            a.social-icon(href='https://devpost.com/software/poolx')
+                                i.fa.fa-link
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            | 2<sup>nd</sup> Place - Blockstack Berlin: A Signature Fund Event - Hackathon 2018
+                        li
+                            span.fa-li
+                                i.fas.fa-briefcase
+                            | Solidity Developer Blog
+                            a.social-icon(href='https://soliditydeveloper.com')
+                                i.fa.fa-link
+                        li
+                            span.fa-li
+                                i.fas.fa-briefcase
+                            | ETH.Berlin follow-up project: PoolX - Funded by Gnosis
+                            a.social-icon(href='https://poolx.org')
+                                i.fa.fa-link
+
+        // Bootstrap core JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
+
+        // Third party plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')

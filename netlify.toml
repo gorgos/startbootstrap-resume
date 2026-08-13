@@ -3,7 +3,7 @@
 
 [build]
   publish = "public"
-  command = ""  # explicit no-op; if Netlify ever rejects "", use command = "true"
+  command = "true"  # no-op: overrides any UI-configured build command
 
 [[headers]]
   for = "/assets/fonts/*"

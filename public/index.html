@@ -8,8 +8,8 @@
     <meta name="author" content="Markus Waas">
     <link rel="canonical" href="https://markuswaas.com/">
 
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#FFFFFF" id="meta-theme-color">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0A0B0D">
 
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Markus Waas — Senior DeFi Developer">
@@ -28,19 +28,9 @@
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <link rel="preload" href="/assets/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-
-    <script>
-    (function () {
-        try {
-            var t = localStorage.getItem("theme");
-            if (t !== "light" && t !== "dark") {
-                t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-            }
-            document.documentElement.dataset.theme = t;
-        } catch (e) {}
-    })();
-    </script>
+    <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="/styles.css">
     <script src="/main.js" defer></script>
@@ -68,211 +58,277 @@
 </head>
 <body>
 
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#about">Skip to content</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
-    <header class="site-header">
-        <button id="theme-toggle" type="button" aria-label="Switch to dark theme">
-            <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.25"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
+    <header class="nav" id="nav">
+        <a class="nav-mark" href="#top" aria-label="Back to top">MW</a>
+        <nav aria-label="Sections">
+            <ul>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <section class="hero" id="top" aria-label="Introduction">
+        <div class="hero-canvas-wrap" aria-hidden="true">
+            <canvas id="market-canvas"></canvas>
+            <div class="hero-shade"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-kicker rv"><span class="pulse-dot" aria-hidden="true"></span>Senior DeFi Developer · Injective Labs</p>
+            <h1 class="hero-name" id="hero-name">Markus Waas</h1>
+            <p class="hero-sub rv">Building the financial core of a decentralized exchange —
+               spot &amp; derivatives, cross-margining, protocol security.</p>
+            <div class="hero-cta rv">
+                <a class="btn btn-solid" href="https://soliditydeveloper.com" rel="noopener" data-magnetic>Read my writing</a>
+                <a class="btn btn-ghost" href="https://github.com/gorgos" rel="noopener" data-magnetic>GitHub</a>
+                <a class="hero-mail" href="mailto:mail@markuswaas.com">mail@markuswaas.com</a>
+            </div>
+        </div>
+        <p class="scroll-cue" aria-hidden="true"><span>scroll</span></p>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>Go</span><span>·</span><span>Cosmos SDK</span><span>·</span><span>CosmWasm</span><span>·</span><span>Rust</span><span>·</span><span>Solidity</span><span>·</span><span>EVM</span><span>·</span><span>Smart&nbsp;Contract&nbsp;Security</span><span>·</span><span>TypeScript</span><span>·</span><span>React</span><span>·</span>
+            <span>Go</span><span>·</span><span>Cosmos SDK</span><span>·</span><span>CosmWasm</span><span>·</span><span>Rust</span><span>·</span><span>Solidity</span><span>·</span><span>EVM</span><span>·</span><span>Smart&nbsp;Contract&nbsp;Security</span><span>·</span><span>TypeScript</span><span>·</span><span>React</span><span>·</span>
+        </div>
+    </div>
 
     <main id="main">
 
-        <section id="about" class="section intro" aria-label="Introduction">
-            <div class="identity">
-                <picture>
-                    <source type="image/webp" srcset="/assets/img/profile-320.webp 320w, /assets/img/profile-640.webp 640w" sizes="64px">
-                    <img class="portrait" src="/assets/img/profile-320.jpg" srcset="/assets/img/profile-320.jpg 320w, /assets/img/profile-640.jpg 640w" sizes="64px" width="320" height="320" alt="Portrait of Markus Waas" fetchpriority="high">
-                </picture>
-                <div>
-                    <h1 id="top">Markus Waas</h1>
-                    <p class="identity-meta">Senior DeFi Developer · Auckland, New Zealand</p>
-                </div>
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="section-head rv">
+                <span class="section-index">01</span>
+                <h2 id="about-title">About</h2>
             </div>
-            <p class="bio">
-                I build the financial core of a decentralized exchange at
-                <a href="https://injective.com" rel="noopener">Injective</a> — six years of spot and
-                derivatives logic in the Cosmos&nbsp;SDK exchange module, most recently its
-                cross-margining system, alongside CosmWasm contracts and Solidity bridges.
-                I hold an MSc in Computer Science from Humboldt University of Berlin, write about
-                smart contract development at
-                <a href="https://soliditydeveloper.com" rel="noopener">soliditydeveloper.com</a>,
-                and have followed blockchain since 2010.
-            </p>
-            <ul class="contact-links" aria-label="Profiles">
-                <li><a href="https://github.com/gorgos" rel="noopener">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/markus-waas-55067b149" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://x.com/markus19" rel="noopener">X</a></li>
-                <li><a href="https://soliditydeveloper.com" rel="noopener">Blog</a></li>
-                <li><a href="mailto:mail@markuswaas.com">Email</a></li>
-            </ul>
+            <div class="about-grid">
+                <div class="about-text rv">
+                    <p class="bio">
+                        I build the financial core of a decentralized exchange at
+                        <a href="https://injective.com" rel="noopener">Injective</a> — six years of spot and
+                        derivatives logic in the Cosmos&nbsp;SDK exchange module, most recently its
+                        cross-margining system, alongside CosmWasm contracts and Solidity bridges.
+                        I write about smart contract development at
+                        <a href="https://soliditydeveloper.com" rel="noopener">soliditydeveloper.com</a>,
+                        and I've followed blockchain since 2010.
+                    </p>
+                    <p class="bio-meta">Auckland, New Zealand · <a href="mailto:mail@markuswaas.com">mail@markuswaas.com</a></p>
+                </div>
+                <figure class="about-photo rv">
+                    <picture>
+                        <source type="image/webp" srcset="/assets/img/profile-320.webp 320w, /assets/img/profile-640.webp 640w" sizes="(min-width: 48rem) 13rem, 9rem">
+                        <img src="/assets/img/profile-320.jpg" srcset="/assets/img/profile-320.jpg 320w, /assets/img/profile-640.jpg 640w" sizes="(min-width: 48rem) 13rem, 9rem" width="320" height="320" alt="Portrait of Markus Waas">
+                    </picture>
+                </figure>
+            </div>
+            <dl class="stats rv" aria-label="Key numbers">
+                <div class="stat">
+                    <dt>Years writing software</dt>
+                    <dd><span class="count" data-count="15" data-decimals="0">0</span><span class="stat-suffix">+</span></dd>
+                </div>
+                <div class="stat">
+                    <dt>Years building Injective</dt>
+                    <dd><span class="count" data-count="6" data-decimals="0">0</span></dd>
+                </div>
+                <div class="stat">
+                    <dt>MSc final grade, CS</dt>
+                    <dd><span class="count" data-count="1.2" data-decimals="1">0.0</span></dd>
+                </div>
+            </dl>
         </section>
 
         <section id="experience" class="section" aria-labelledby="experience-title">
-            <h2 id="experience-title">Experience</h2>
+            <div class="section-head rv">
+                <span class="section-index">02</span>
+                <h2 id="experience-title">Experience</h2>
+            </div>
 
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Senior DeFi Developer, <a href="https://injective.com" rel="noopener">Injective Labs</a></h3>
-                    <p class="entry-dates"><time datetime="2020-07">Jul 2020</time> – Present</p>
-                </header>
-                <ul class="entry-points">
-                    <li>Own the financial core of the exchange protocol — the Cosmos&nbsp;SDK exchange module's spot and derivatives logic, written in Go.</li>
-                    <li>Helped design and build the protocol's new cross-margining system.</li>
-                    <li>Drive security across the module: audits, fixes, and continuous hardening of the exchange logic.</li>
-                    <li>Earlier work includes Solidity bridge contracts integrated with The&nbsp;Graph, and CosmWasm contracts.</li>
-                </ul>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Smart Contract Solidity Developer, Laminar (Acala)</h3>
-                    <p class="entry-dates"><time datetime="2020-03">Mar 2020</time> – <time datetime="2020-07">Jul 2020</time></p>
-                </header>
-                <p>Designed and built a leveraged margin trading platform on Ethereum — multiple markets, margin calls, and liquidations — with The&nbsp;Graph integration so the frontend could query state efficiently.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Blockchain Engineer, Juri</h3>
-                    <p class="entry-dates"><time datetime="2019-04">Apr 2019</time> – <time datetime="2020-03">Mar 2020</time></p>
-                </header>
-                <p>Implemented a novel staking pool and researched the platform's blockchain integration — most notably, designed a fully decentralized oracle system.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Blockchain Engineer &amp; Full-stack Developer, Starbase</h3>
-                    <p class="entry-dates"><time datetime="2018-07">Jul 2018</time> – <time datetime="2019-11">Nov 2019</time></p>
-                </header>
-                <p>On a small Scrum team building a token-based crowdfunding platform: introduced a staking and ranking smart contract for ERC-20 tokens, implemented a secure funds splitter, and improved the token sale contracts.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Frontend Developer, Infopark</h3>
-                    <p class="entry-dates"><time datetime="2014-10">Oct 2014</time> – <time datetime="2018-07">Jul 2018</time></p>
-                </header>
-                <p>Built frontend features for a JavaScript CMS in a Scrum team — new value-type editors and an improved React integration that made the CMS more convenient for developers.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Engineering Intern, Crypto Software Chryselius</h3>
-                    <p class="entry-dates"><time datetime="2010-10">Oct 2010</time> – <time datetime="2011-10">Oct 2011</time></p>
-                </header>
-                <p>Java and C++ development of a chipcard-based bootloader and file-container encryption on Ubuntu; set up the development environment and administered the backup and build servers.</p>
-            </article>
+            <ol class="xp-list">
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Senior DeFi Developer</h3>
+                        <p class="xp-org"><a href="https://injective.com" rel="noopener">Injective Labs</a></p>
+                        <p class="xp-dates"><time datetime="2020-07">Jul 2020</time> — Present</p>
+                    </header>
+                    <ul class="xp-points">
+                        <li>Own the financial core of the exchange protocol — the Cosmos&nbsp;SDK exchange module's spot and derivatives logic, written in Go.</li>
+                        <li>Helped design and build the protocol's new cross-margining system.</li>
+                        <li>Drive security across the module: audits, fixes, and continuous hardening of the exchange logic.</li>
+                        <li>Earlier work includes Solidity bridge contracts integrated with The&nbsp;Graph, and CosmWasm contracts.</li>
+                    </ul>
+                </li>
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Smart Contract Solidity Developer</h3>
+                        <p class="xp-org">Laminar (Acala)</p>
+                        <p class="xp-dates"><time datetime="2020-03">Mar</time> — <time datetime="2020-07">Jul 2020</time></p>
+                    </header>
+                    <p>Designed and built a leveraged margin trading platform on Ethereum — multiple markets, margin calls, and liquidations — with The&nbsp;Graph integration so the frontend could query state efficiently.</p>
+                </li>
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Blockchain Engineer</h3>
+                        <p class="xp-org">Juri</p>
+                        <p class="xp-dates"><time datetime="2019-04">Apr 2019</time> — <time datetime="2020-03">Mar 2020</time></p>
+                    </header>
+                    <p>Implemented a novel staking pool and researched the platform's blockchain integration — most notably, designed a fully decentralized oracle system.</p>
+                </li>
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Blockchain Engineer &amp; Full-stack Developer</h3>
+                        <p class="xp-org">Starbase</p>
+                        <p class="xp-dates"><time datetime="2018-07">Jul 2018</time> — <time datetime="2019-11">Nov 2019</time></p>
+                    </header>
+                    <p>On a small Scrum team building a token-based crowdfunding platform: introduced a staking and ranking smart contract for ERC-20 tokens, implemented a secure funds splitter, and improved the token sale contracts.</p>
+                </li>
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Frontend Developer</h3>
+                        <p class="xp-org">Infopark</p>
+                        <p class="xp-dates"><time datetime="2014-10">Oct 2014</time> — <time datetime="2018-07">Jul 2018</time></p>
+                    </header>
+                    <p>Built frontend features for a JavaScript CMS in a Scrum team — new value-type editors and an improved React integration that made the CMS more convenient for developers.</p>
+                </li>
+                <li class="xp card rv">
+                    <header class="xp-head">
+                        <h3>Engineering Intern</h3>
+                        <p class="xp-org">Crypto Software Chryselius</p>
+                        <p class="xp-dates"><time datetime="2010-10">Oct 2010</time> — <time datetime="2011-10">Oct 2011</time></p>
+                    </header>
+                    <p>Java and C++ development of a chipcard-based bootloader and file-container encryption on Ubuntu; set up the development environment and administered the backup and build servers.</p>
+                </li>
+            </ol>
         </section>
 
         <section id="writing" class="section" aria-labelledby="writing-title">
-            <h2 id="writing-title">Writing</h2>
-            <p class="section-note">
+            <div class="section-head rv">
+                <span class="section-index">03</span>
+                <h2 id="writing-title">Writing</h2>
+            </div>
+            <p class="section-note rv">
                 I run <a href="https://soliditydeveloper.com" rel="noopener">soliditydeveloper.com</a> —
                 practical deep dives on smart contract development, from EVM internals to protocol integrations.
             </p>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3><a href="https://soliditydeveloper.com/wormhole" rel="noopener">How to integrate Wormhole in your smart contracts</a></h3>
-                    <p class="entry-dates"><time datetime="2023-05">May 2023</time></p>
-                </header>
-                <p>Cross-chain messaging across Ethereum, Cosmos, Injective, and beyond.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3><a href="https://soliditydeveloper.com/arbitrum-nitro" rel="noopener">How Ethereum scales with Arbitrum Nitro</a></h3>
-                    <p class="entry-dates"><time datetime="2022-10">Oct 2022</time></p>
-                </header>
-                <p>A blockchain-on-a-blockchain deep dive, and how to use it.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3><a href="https://soliditydeveloper.com/merkle-tree" rel="noopener">The Ultimate Merkle Tree Guide in Solidity</a></h3>
-                    <p class="entry-dates"><time datetime="2022-08">Aug 2022</time></p>
-                </header>
-                <p>Everything you need to know about Merkle trees and where they're heading.</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3><a href="https://soliditydeveloper.com/foundry" rel="noopener">Writing ERC-20 Tests in Solidity with Foundry</a></h3>
-                    <p class="entry-dates"><time datetime="2022-04">Apr 2022</time></p>
-                </header>
-                <p>Blazing-fast tests with no BigNumber.js in sight — only Solidity.</p>
-            </article>
-
-            <p class="more-link"><a href="https://soliditydeveloper.com" rel="noopener">All articles →</a></p>
+            <div class="post-grid">
+                <a class="post card rv" href="https://soliditydeveloper.com/wormhole" rel="noopener">
+                    <p class="post-date"><time datetime="2023-05">May 2023</time></p>
+                    <h3>How to integrate Wormhole in your smart contracts</h3>
+                    <p class="post-desc">Cross-chain messaging across Ethereum, Cosmos, Injective, and beyond.</p>
+                    <span class="post-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="post card rv" href="https://soliditydeveloper.com/arbitrum-nitro" rel="noopener">
+                    <p class="post-date"><time datetime="2022-10">Oct 2022</time></p>
+                    <h3>How Ethereum scales with Arbitrum Nitro</h3>
+                    <p class="post-desc">A blockchain-on-a-blockchain deep dive, and how to use it.</p>
+                    <span class="post-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="post card rv" href="https://soliditydeveloper.com/merkle-tree" rel="noopener">
+                    <p class="post-date"><time datetime="2022-08">Aug 2022</time></p>
+                    <h3>The Ultimate Merkle Tree Guide in Solidity</h3>
+                    <p class="post-desc">Everything you need to know about Merkle trees and where they're heading.</p>
+                    <span class="post-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="post card rv" href="https://soliditydeveloper.com/foundry" rel="noopener">
+                    <p class="post-date"><time datetime="2022-04">Apr 2022</time></p>
+                    <h3>Writing ERC-20 Tests in Solidity with Foundry</h3>
+                    <p class="post-desc">Blazing-fast tests with no BigNumber.js in sight — only Solidity.</p>
+                    <span class="post-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+            <p class="more-link rv"><a href="https://soliditydeveloper.com" rel="noopener">All articles →</a></p>
         </section>
 
         <section id="education" class="section" aria-labelledby="education-title">
-            <h2 id="education-title">Education</h2>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Humboldt University of Berlin</h3>
-                    <p class="entry-dates"><time datetime="2011-10">2011</time> – <time datetime="2018-10">2018</time></p>
-                </header>
-                <p>MSc in Computer Science. Final grade 1.2 (German scale; ≈ 3.9/4.0 GPA).</p>
-            </article>
-
-            <article class="entry">
-                <header class="entry-header">
-                    <h3>Ottonagel-Gymnasium</h3>
-                    <p class="entry-dates"><time datetime="2003-08">2003</time> – <time datetime="2010-08">2010</time></p>
-                </header>
-                <p>Allgemeine Hochschulreife (Abitur).</p>
-            </article>
+            <div class="section-head rv">
+                <span class="section-index">04</span>
+                <h2 id="education-title">Education</h2>
+            </div>
+            <div class="edu rv">
+                <div class="edu-row">
+                    <div>
+                        <h3>Humboldt University of Berlin</h3>
+                        <p>MSc in Computer Science · Final grade 1.2 (German scale; ≈ 3.9/4.0 GPA)</p>
+                    </div>
+                    <p class="edu-dates">2011 — 2018</p>
+                </div>
+                <div class="edu-row">
+                    <div>
+                        <h3>Ottonagel-Gymnasium</h3>
+                        <p>Allgemeine Hochschulreife (Abitur)</p>
+                    </div>
+                    <p class="edu-dates">2003 — 2010</p>
+                </div>
+            </div>
         </section>
 
         <section id="skills" class="section" aria-labelledby="skills-title">
-            <h2 id="skills-title">Skills</h2>
-            <dl class="skills-list">
+            <div class="section-head rv">
+                <span class="section-index">05</span>
+                <h2 id="skills-title">Skills</h2>
+            </div>
+            <dl class="skills rv">
                 <div class="skills-row">
                     <dt>Protocol &amp; chain</dt>
-                    <dd>Go, Cosmos SDK, CosmWasm, Rust</dd>
+                    <dd><span>Go</span><span>Cosmos SDK</span><span>CosmWasm</span><span>Rust</span></dd>
                 </div>
                 <div class="skills-row">
                     <dt>Smart contracts</dt>
-                    <dd>Solidity, EVM, audits &amp; hardening</dd>
+                    <dd><span>Solidity</span><span>EVM</span><span>Audits &amp; hardening</span></dd>
                 </div>
                 <div class="skills-row">
                     <dt>Web</dt>
-                    <dd>JavaScript / TypeScript, React</dd>
+                    <dd><span>JavaScript / TypeScript</span><span>React</span></dd>
                 </div>
                 <div class="skills-row">
                     <dt>Languages</dt>
-                    <dd>German (native), English (native proficiency), Spanish (elementary)</dd>
+                    <dd><span>German (native)</span><span>English (native proficiency)</span><span>Spanish (elementary)</span></dd>
                 </div>
             </dl>
         </section>
 
         <section id="interests" class="section" aria-labelledby="interests-title">
-            <h2 id="interests-title">Interests</h2>
-            <p>
-                Away from the keyboard I train — powerlifting and calisthenics — and play padel
-                and tennis, outdoors whenever the summer allows. Beyond sport I go deep on
-                biohacking, longevity research, and Stoic philosophy.
-            </p>
-            <p>
-                I've been following blockchain since the beginning — the Bitcoin genesis block,
-                naturally. All right, since about 2010: an active community member trying to
-                understand every new idea down to the technical level.
-            </p>
+            <div class="section-head rv">
+                <span class="section-index">06</span>
+                <h2 id="interests-title">Interests</h2>
+            </div>
+            <div class="interests rv">
+                <p>
+                    Away from the keyboard I train — powerlifting and calisthenics — and play padel
+                    and tennis, outdoors whenever the summer allows. Beyond sport I go deep on
+                    biohacking, longevity research, and Stoic philosophy.
+                </p>
+                <p>
+                    I've been following blockchain since the beginning — the Bitcoin genesis block,
+                    naturally. All right, since about 2010: an active community member trying to
+                    understand every new idea down to the technical level.
+                </p>
+            </div>
         </section>
 
-        <footer class="site-footer">
-            <p>
-                <a href="mailto:mail@markuswaas.com">mail@markuswaas.com</a> · Auckland, New Zealand
-            </p>
-            <p class="colophon">
-                No frameworks, no trackers ·
-                <a href="https://github.com/gorgos/startbootstrap-resume" rel="noopener">Source</a>
-                · © <span id="year">2026</span> Markus Waas
-            </p>
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+            <div class="section-head rv">
+                <span class="section-index">07</span>
+                <h2 id="contact-title">Contact</h2>
+            </div>
+            <p class="contact-line rv">Building something in DeFi, or want to talk protocol engineering?</p>
+            <a class="contact-mail rv" href="mailto:mail@markuswaas.com" data-magnetic>mail@markuswaas.com<span aria-hidden="true"> ↗</span></a>
+            <ul class="contact-links rv" aria-label="Profiles">
+                <li><a href="https://github.com/gorgos" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/markus-waas-55067b149" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://x.com/markus19" rel="noopener">X</a></li>
+                <li><a href="https://soliditydeveloper.com" rel="noopener">Blog</a></li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p>Auckland, New Zealand · Hand-built, no frameworks, no trackers ·
+               <a href="https://github.com/gorgos/startbootstrap-resume" rel="noopener">Source</a>
+               · © <span id="year">2026</span> Markus Waas</p>
         </footer>
 
     </main>

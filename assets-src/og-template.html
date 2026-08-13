@@ -4,70 +4,103 @@
 <meta charset="utf-8">
 <style>
     @font-face {
-        font-family: "Inter";
-        src: url("../public/assets/fonts/inter-latin.woff2") format("woff2");
+        font-family: "Clash Display";
+        src: url("../public/assets/fonts/clash-display-600.woff2") format("woff2");
+        font-weight: 600;
+    }
+    @font-face {
+        font-family: "JetBrains Mono";
+        src: url("../public/assets/fonts/jetbrains-mono-latin.woff2") format("woff2");
         font-weight: 400 700;
     }
     * { margin: 0; box-sizing: border-box; }
     body {
         width: 1200px;
         height: 630px;
-        background: #FFFFFF;
-        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 100px;
+        background: #0A0B0D;
+        font-family: "Clash Display", "Helvetica Neue", Arial, sans-serif;
         position: relative;
+        overflow: hidden;
+        color: #F2F5F4;
+    }
+    .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+        background-size: 90px 90px;
+    }
+    .content {
+        position: absolute;
+        left: 96px;
+        top: 150px;
+    }
+    .kicker {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 22px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #00E5A0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    .kicker::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #00E5A0;
+        box-shadow: 0 0 18px rgba(0,229,160,0.8);
     }
     h1 {
-        font-size: 84px;
-        font-weight: 700;
-        letter-spacing: -0.025em;
-        color: #171717;
-    }
-    .role {
-        margin-top: 18px;
-        font-size: 34px;
-        font-weight: 400;
-        color: #6E6E6E;
+        margin-top: 20px;
+        font-size: 110px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        line-height: 1;
     }
     .meta {
-        margin-top: 44px;
-        font-size: 26px;
-        color: #8C8C8C;
+        margin-top: 30px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 24px;
+        color: #7E8683;
+    }
+    svg.spark {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     .domain {
         position: absolute;
-        left: 100px;
-        bottom: 64px;
-        font-size: 26px;
-        font-weight: 500;
-        color: #171717;
-    }
-    .mark {
-        position: absolute;
-        right: 100px;
-        bottom: 52px;
-        width: 60px;
-        height: 60px;
-        border-radius: 13px;
-        background: #171717;
-        color: #FFFFFF;
-        font-size: 22px;
-        font-weight: 600;
-        letter-spacing: -0.5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        left: 96px;
+        bottom: 48px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 24px;
+        color: #A9B1AE;
     }
 </style>
 </head>
 <body>
-    <h1>Markus Waas</h1>
-    <p class="role">Senior DeFi Developer at Injective</p>
-    <p class="meta">Cosmos SDK · Go · CosmWasm · Solidity · soliditydeveloper.com</p>
+    <div class="grid"></div>
+    <svg class="spark" width="1200" height="240" viewBox="0 0 1200 240" fill="none">
+        <defs>
+            <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#00E5A0" stop-opacity="0.18"/>
+                <stop offset="1" stop-color="#00E5A0" stop-opacity="0"/>
+            </linearGradient>
+        </defs>
+        <path d="M0 190 L80 178 L140 185 L220 150 L300 162 L360 128 L440 140 L520 96 L600 118 L680 84 L760 98 L840 60 L920 78 L1000 40 L1080 58 L1200 22 L1200 240 L0 240 Z" fill="url(#a)"/>
+        <path d="M0 190 L80 178 L140 185 L220 150 L300 162 L360 128 L440 140 L520 96 L600 118 L680 84 L760 98 L840 60 L920 78 L1000 40 L1080 58 L1200 22" stroke="#00E5A0" stroke-width="2.5" stroke-opacity="0.9"/>
+        <circle cx="1080" cy="58" r="5" fill="#00E5A0"/>
+    </svg>
+    <div class="content">
+        <p class="kicker">Senior DeFi Developer · Injective</p>
+        <h1>Markus Waas</h1>
+        <p class="meta">Cosmos SDK · Go · CosmWasm · Solidity · soliditydeveloper.com</p>
+    </div>
     <p class="domain">markuswaas.com</p>
-    <div class="mark">MW</div>
 </body>
 </html>

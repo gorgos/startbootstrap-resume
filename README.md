@@ -62,8 +62,9 @@ OG image (from `assets-src/og-template.html`):
 
 ## Fonts
 
-[Inter](https://rsms.me/inter/) — SIL Open Font License, self-hosted as a
-latin-subset variable woff2 file.
+Self-hosted woff2 files: [Clash Display](https://www.fontshare.com/fonts/clash-display)
+(ITF Free Font License, display), [Inter](https://rsms.me/inter/) (SIL OFL, body),
+and [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (SIL OFL, data/labels).
 
 ## Credits
 

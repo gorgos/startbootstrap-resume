@@ -1,0 +1,24 @@
+# Deploy configuration — overrides any settings in the Netlify UI (per-key).
+# The site is fully static: no build step, publish the public/ folder as-is.
+
+[build]
+  publish = "public"
+  command = ""  # explicit no-op; if Netlify ever rejects "", use command = "true"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

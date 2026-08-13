@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+    @font-face {
+        font-family: "Fraunces";
+        src: url("../public/assets/fonts/fraunces-latin.woff2") format("woff2");
+        font-weight: 400 700;
+    }
+    @font-face {
+        font-family: "Inter";
+        src: url("../public/assets/fonts/inter-latin.woff2") format("woff2");
+        font-weight: 400 700;
+    }
+    * { margin: 0; box-sizing: border-box; }
+    body {
+        width: 1200px;
+        height: 630px;
+        background: #FBF7F2;
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 96px;
+        position: relative;
+        overflow: hidden;
+    }
+    .rule {
+        width: 72px;
+        height: 6px;
+        border-radius: 3px;
+        background: #BD5D38;
+        margin-bottom: 36px;
+    }
+    .kicker {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #9C4A26;
+        margin-bottom: 18px;
+    }
+    h1 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 118px;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        line-height: 1.0;
+        color: #2C241D;
+    }
+    h1 span { color: #BD5D38; }
+    .meta {
+        margin-top: 34px;
+        font-size: 30px;
+        color: #5D5248;
+    }
+    .domain {
+        position: absolute;
+        left: 96px;
+        bottom: 56px;
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        font-size: 26px;
+        color: #6E6257;
+    }
+    .mark {
+        position: absolute;
+        right: 96px;
+        bottom: 48px;
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        background: #BD5D38;
+        color: #FBF7F2;
+        font-family: Georgia, serif;
+        font-size: 27px;
+        letter-spacing: -1.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+    <div class="rule"></div>
+    <p class="kicker">Senior DeFi Developer</p>
+    <h1>Markus <span>Waas</span></h1>
+    <p class="meta">Cosmos SDK · Go · CosmWasm · Solidity — author of soliditydeveloper.com</p>
+    <p class="domain">markuswaas.com</p>
+    <div class="mark">MW</div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markus Waas — Senior DeFi Developer</title>
+    <meta name="description" content="Senior DeFi developer at Injective, building the financial core of a decentralized exchange — Cosmos SDK, Go, CosmWasm, Solidity. Writes at soliditydeveloper.com.">
+    <meta name="author" content="Markus Waas">
+    <link rel="canonical" href="https://markuswaas.com/">
+
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#FBF7F2" id="meta-theme-color">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Markus Waas — Senior DeFi Developer">
+    <meta property="og:description" content="Building the financial core of a decentralized exchange at Injective. Cosmos SDK, Go, CosmWasm, Solidity. Author of soliditydeveloper.com.">
+    <meta property="og:url" content="https://markuswaas.com/">
+    <meta property="og:site_name" content="Markus Waas">
+    <meta property="og:image" content="https://markuswaas.com/assets/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Markus Waas — Senior DeFi Developer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@markus19">
+
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/icons/favicon-96.png" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <script>
+    (function () {
+        try {
+            var t = localStorage.getItem("theme");
+            if (t !== "light" && t !== "dark") {
+                t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.dataset.theme = t;
+            document.documentElement.classList.add("js");
+        } catch (e) {}
+    })();
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/main.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Markus Waas",
+        "url": "https://markuswaas.com/",
+        "image": "https://markuswaas.com/assets/img/profile-640.jpg",
+        "jobTitle": "Senior DeFi Developer",
+        "worksFor": { "@type": "Organization", "name": "Injective Labs" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Humboldt University of Berlin" },
+        "email": "mailto:mail@markuswaas.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Auckland", "addressCountry": "NZ" },
+        "sameAs": [
+            "https://github.com/gorgos",
+            "https://www.linkedin.com/in/markus-waas-55067b149",
+            "https://x.com/markus19",
+            "https://soliditydeveloper.com"
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="rail">
+        <div class="rail-inner">
+            <a class="rail-avatar" href="#about" aria-hidden="true" tabindex="-1">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/profile-320.webp 320w, /assets/img/profile-640.webp 640w" sizes="(min-width: 64rem) 8.5rem, 2.25rem">
+                    <img src="/assets/img/profile-320.jpg" srcset="/assets/img/profile-320.jpg 320w, /assets/img/profile-640.jpg 640w" sizes="(min-width: 64rem) 8.5rem, 2.25rem" width="320" height="320" alt="" fetchpriority="high">
+                </picture>
+            </a>
+            <div class="rail-identity">
+                <a class="rail-name" href="#about">Markus Waas</a>
+                <p class="rail-role">Senior DeFi Developer</p>
+            </div>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <svg class="icon-menu" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+                <span class="visually-hidden">Menu</span>
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Sections">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#writing">Writing</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                </ul>
+            </nav>
+
+            <button id="theme-toggle" type="button" aria-label="Switch to dark theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section id="about" class="section hero" aria-labelledby="about-title">
+            <div class="section-inner">
+                <p class="kicker">Senior DeFi Developer</p>
+                <h1 id="about-title">Markus <span class="accent">Waas</span></h1>
+                <p class="hero-meta">Auckland, New Zealand · <a href="mailto:mail@markuswaas.com">mail@markuswaas.com</a></p>
+                <p class="lead">
+                    I build the financial core of a decentralized exchange at
+                    <a href="https://injective.com" rel="noopener">Injective</a> — six years of spot and
+                    derivatives logic in the Cosmos&nbsp;SDK exchange module, most recently its
+                    cross-margining system, alongside CosmWasm contracts and Solidity bridges.
+                    I hold an MSc in Computer Science from Humboldt University of Berlin, write about
+                    smart contract development at
+                    <a href="https://soliditydeveloper.com" rel="noopener">soliditydeveloper.com</a>,
+                    and have followed blockchain since 2010.
+                </p>
+                <ul class="social-row" aria-label="Profiles">
+                    <li>
+                        <a href="https://github.com/gorgos" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <span class="visually-hidden">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/markus-waas-55067b149" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <span class="visually-hidden">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/markus19" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            <span class="visually-hidden">X (Twitter)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://soliditydeveloper.com" rel="noopener">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                            <span class="visually-hidden">Blog — soliditydeveloper.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:mail@markuswaas.com">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span class="visually-hidden">Email</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="section" aria-labelledby="experience-title">
+            <div class="section-inner">
+                <h2 id="experience-title">Experience</h2>
+                <ol class="timeline">
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Senior DeFi Developer</h3>
+                                    <p class="org"><a href="https://injective.com" rel="noopener">Injective Labs</a></p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2020-07">July 2020</time> – Present</p>
+                            </header>
+                            <ul class="entry-points">
+                                <li>Own the financial core of the exchange protocol — the Cosmos&nbsp;SDK exchange module's spot and derivatives logic, written in Go.</li>
+                                <li>Designed and shipped the protocol's new cross-margining system.</li>
+                                <li>Drive security across the module: audits, fixes, and continuous hardening of the exchange logic.</li>
+                                <li>Earlier work includes Solidity bridge contracts integrated with The&nbsp;Graph, and CosmWasm contracts.</li>
+                            </ul>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>Go</li><li>Cosmos SDK</li><li>CosmWasm</li><li>Solidity</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Smart Contract Solidity Developer</h3>
+                                    <p class="org">Laminar (Acala)</p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2020-03">March 2020</time> – <time datetime="2020-07">July 2020</time></p>
+                            </header>
+                            <p>Designed and built a leveraged margin trading platform on Ethereum — multiple markets, margin calls, and liquidations — with The&nbsp;Graph integration so the frontend could query state efficiently.</p>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>Solidity</li><li>Ethereum</li><li>The Graph</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Blockchain Engineer</h3>
+                                    <p class="org">Juri</p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2019-04">April 2019</time> – <time datetime="2020-03">March 2020</time></p>
+                            </header>
+                            <p>Implemented a novel staking pool and researched the platform's blockchain integration — most notably, designed a fully decentralized oracle system.</p>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>Solidity</li><li>Ethereum</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Blockchain Engineer &amp; Full-stack Developer</h3>
+                                    <p class="org">Starbase</p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2018-07">July 2018</time> – <time datetime="2019-11">November 2019</time></p>
+                            </header>
+                            <p>On a small Scrum team building a token-based crowdfunding platform: introduced a staking and ranking smart contract for ERC-20 tokens, implemented a secure funds splitter, and improved the token sale contracts.</p>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>Solidity</li><li>ERC-20</li><li>Full-stack</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Frontend Developer</h3>
+                                    <p class="org">Infopark</p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2014-10">October 2014</time> – <time datetime="2018-07">July 2018</time></p>
+                            </header>
+                            <p>Built frontend features for a JavaScript CMS in a Scrum team — new value-type editors and an improved React integration that made the CMS more convenient for developers.</p>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>JavaScript</li><li>React</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <header class="entry-header">
+                                <div>
+                                    <h3>Engineering Intern</h3>
+                                    <p class="org">Crypto Software Chryselius</p>
+                                </div>
+                                <p class="entry-dates"><time datetime="2010-10">October 2010</time> – <time datetime="2011-10">October 2011</time></p>
+                            </header>
+                            <p>Java and C++ development of a chipcard-based bootloader and file-container encryption on Ubuntu; set up the development environment and administered the backup and build servers.</p>
+                            <ul class="tags" aria-label="Technologies">
+                                <li>Java</li><li>C++</li><li>Linux</li>
+                            </ul>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="writing" class="section" aria-labelledby="writing-title">
+            <div class="section-inner">
+                <h2 id="writing-title">Writing</h2>
+                <p class="section-lead">
+                    I run <a href="https://soliditydeveloper.com" rel="noopener">soliditydeveloper.com</a> —
+                    practical deep dives on smart contract development, from EVM internals to protocol integrations.
+                </p>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3><a href="https://soliditydeveloper.com/solidity-chatgpt" rel="noopener">How to use ChatGPT with Solidity</a></h3>
+                        <p>Using the Solidity Scholar and other GPT techniques in day-to-day contract work.</p>
+                        <p class="card-meta"><time datetime="2024-02">February 2024</time></p>
+                    </article>
+                    <article class="card">
+                        <h3><a href="https://soliditydeveloper.com/wormhole" rel="noopener">How to integrate Wormhole in your smart contracts</a></h3>
+                        <p>Cross-chain messaging across Ethereum, Cosmos, Injective, and beyond.</p>
+                        <p class="card-meta"><time datetime="2023-05">May 2023</time></p>
+                    </article>
+                    <article class="card">
+                        <h3><a href="https://soliditydeveloper.com/merkle-tree" rel="noopener">The Ultimate Merkle Tree Guide in Solidity</a></h3>
+                        <p>Everything you need to know about Merkle trees and where they're heading.</p>
+                        <p class="card-meta"><time datetime="2022-08">August 2022</time></p>
+                    </article>
+                    <article class="card">
+                        <h3><a href="https://soliditydeveloper.com/foundry" rel="noopener">Writing ERC-20 Tests in Solidity with Foundry</a></h3>
+                        <p>Blazing-fast tests with no BigNumber.js in sight — only Solidity.</p>
+                        <p class="card-meta"><time datetime="2022-04">April 2022</time></p>
+                    </article>
+                </div>
+                <p class="all-link"><a href="https://soliditydeveloper.com" rel="noopener">All articles on soliditydeveloper.com&nbsp;→</a></p>
+            </div>
+        </section>
+
+        <section id="education" class="section" aria-labelledby="education-title">
+            <div class="section-inner">
+                <h2 id="education-title">Education</h2>
+                <article class="edu-entry">
+                    <header class="entry-header">
+                        <div>
+                            <h3>Humboldt University of Berlin</h3>
+                            <p class="org">Master of Science, Computer Science</p>
+                        </div>
+                        <p class="entry-dates"><time datetime="2011-10">October 2011</time> – <time datetime="2018-10">October 2018</time></p>
+                    </header>
+                    <p>Final grade 1.2 (German scale; ≈ 3.9/4.0 GPA).</p>
+                </article>
+                <article class="edu-entry">
+                    <header class="entry-header">
+                        <div>
+                            <h3>Ottonagel-Gymnasium</h3>
+                            <p class="org">Allgemeine Hochschulreife (Abitur)</p>
+                        </div>
+                        <p class="entry-dates"><time datetime="2003-08">August 2003</time> – <time datetime="2010-08">August 2010</time></p>
+                    </header>
+                    <p>Final grade 1.9.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section" aria-labelledby="skills-title">
+            <div class="section-inner">
+                <h2 id="skills-title">Skills</h2>
+                <div class="skill-group">
+                    <h3>Protocol &amp; Chain Engineering</h3>
+                    <ul class="tags tags-lg">
+                        <li>Go</li><li>Cosmos SDK</li><li>CosmWasm</li><li>Rust</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Smart Contracts &amp; Security</h3>
+                    <ul class="tags tags-lg">
+                        <li>Solidity</li><li>EVM</li><li>The Graph</li><li>Audits &amp; hardening</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Web &amp; Cloud</h3>
+                    <ul class="tags tags-lg">
+                        <li>JavaScript / TypeScript</li><li>React</li><li>AWS</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Spoken Languages</h3>
+                    <ul class="tags tags-lg">
+                        <li>German (native)</li><li>English (native proficiency)</li><li>Spanish (elementary)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section" aria-labelledby="interests-title">
+            <div class="section-inner">
+                <h2 id="interests-title">Interests</h2>
+                <p>
+                    Away from the keyboard I chase sport — calisthenics and soccer, outdoors whenever the
+                    summer allows — and go deep on biohacking, longevity research, and Stoic philosophy.
+                </p>
+                <p>
+                    I've been following blockchain since the beginning — the Bitcoin genesis block, naturally.
+                    All right, since about 2010: an active community member trying to understand every new
+                    idea down to the technical level.
+                </p>
+            </div>
+        </section>
+
+        <section id="awards" class="section" aria-labelledby="awards-title">
+            <div class="section-inner">
+                <h2 id="awards-title">Awards</h2>
+                <ul class="awards-list">
+                    <li>
+                        <p class="award-kicker">3rd Place · HackMoney 2020</p>
+                        <p class="award-body">Aave Award for <strong>MagicBet</strong>.</p>
+                    </li>
+                    <li>
+                        <p class="award-kicker">1st Place · ETH.Berlin 2018</p>
+                        <p class="award-body">Gnosis Award for <strong>PoolX</strong> — <a href="https://devpost.com/software/poolx" rel="noopener">project on Devpost</a>. Follow-up development funded by Gnosis.</p>
+                    </li>
+                    <li>
+                        <p class="award-kicker">2nd Place · Blockstack Berlin 2018</p>
+                        <p class="award-body">A Signature Fund event.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="section-inner">
+                <p>
+                    <a href="mailto:mail@markuswaas.com">mail@markuswaas.com</a>
+                    · Auckland, New Zealand
+                </p>
+                <p class="colophon">
+                    Hand-built with plain HTML &amp; CSS — no frameworks, no trackers.
+                    <a href="https://github.com/gorgos/startbootstrap-resume" rel="noopener">Source</a>.
+                    © <span id="year">2026</span> Markus Waas.
+                </p>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>

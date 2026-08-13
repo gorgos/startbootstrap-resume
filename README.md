@@ -62,9 +62,8 @@ OG image (from `assets-src/og-template.html`):
 
 ## Fonts
 
-[Fraunces](https://github.com/undercasetype/Fraunces) (display) and
-[Inter](https://rsms.me/inter/) (text) — both SIL Open Font License,
-self-hosted as latin-subset variable woff2 files.
+[Inter](https://rsms.me/inter/) — SIL Open Font License, self-hosted as a
+latin-subset variable woff2 file.
 
 ## Credits
 

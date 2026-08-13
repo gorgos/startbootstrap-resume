@@ -31,14 +31,14 @@ directory (`public/`) and an empty build command, overriding any UI settings.
 
 ## Regenerating assets
 
-Profile photo (from `assets-src/profile-sq.jpg`, the 2000×2000 crop master;
-recrop from `profile-original.jpg` with `sips -c 2000 2000 --cropOffset 0 <x>`):
+Profile photo (from `assets-src/profile-2026.png`, cropped center to 4:5 first):
 
 ```bash
-sips -z 640 640 -s format jpeg -s formatOptions 78 assets-src/profile-sq.jpg --out public/assets/img/profile-640.jpg
-sips -z 320 320 -s format jpeg -s formatOptions 80 assets-src/profile-sq.jpg --out public/assets/img/profile-320.jpg
-cwebp -q 82 -resize 640 640 assets-src/profile-sq.jpg -o public/assets/img/profile-640.webp
-cwebp -q 82 -resize 320 320 assets-src/profile-sq.jpg -o public/assets/img/profile-320.webp
+sips -c 1400 1120 assets-src/profile-2026.png --out /tmp/profile-45.png
+sips -z 800 640 -s format jpeg -s formatOptions 80 /tmp/profile-45.png --out public/assets/img/profile-640.jpg
+sips -z 400 320 -s format jpeg -s formatOptions 82 /tmp/profile-45.png --out public/assets/img/profile-320.jpg
+cwebp -q 82 -resize 640 800 /tmp/profile-45.png -o public/assets/img/profile-640.webp
+cwebp -q 84 -resize 320 400 /tmp/profile-45.png -o public/assets/img/profile-320.webp
 ```
 
 Favicon PNGs (from `assets-src/favicon.svg`):

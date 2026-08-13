@@ -5,6 +5,11 @@
   publish = "public"
   command = "true"  # no-op: overrides any UI-configured build command
 
+[build.environment]
+  # The site still has a stale NODE_VERSION=12 env var from the old template
+  # build; the Netlify Prerender extension's dependencies need modern Node.
+  NODE_VERSION = "22"
+
 [[headers]]
   for = "/assets/fonts/*"
   [headers.values]

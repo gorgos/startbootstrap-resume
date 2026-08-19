@@ -603,6 +603,9 @@
 
     .about-photo img {
         width: 9rem;
+        aspect-ratio: 1;
+        height: auto;
+        object-fit: cover;
         border-radius: 18px;
         border: 1px solid var(--line-2);
         filter: grayscale(1) contrast(1.05);
